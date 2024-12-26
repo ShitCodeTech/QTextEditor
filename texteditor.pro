@@ -9,3 +9,4 @@ HEADERS += texteditor.h
 
 FORMS += texteditor.ui
 
+TRANSLATION += locale_ru_RU.ts
