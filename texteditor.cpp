@@ -10,8 +10,8 @@
 #include <QTextStream>
 #include <qshortcut.h>
 
-                     TextEditor::TextEditor(QWidget *parent)
-    : QMainWindow(parent), ui(new Ui::TextEditor) {
+TextEditor::TextEditor(QWidget *parent)
+: QMainWindow(parent), ui(new Ui::TextEditor) {
     ui->setupUi(this);
 
     // Set up keyboard shortcuts

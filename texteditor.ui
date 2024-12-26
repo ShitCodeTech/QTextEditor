@@ -13,6 +13,49 @@
   <property name="windowTitle">
    <string>Text Editor</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">/* Dark Theme */
+QWidget {
+    background-color: #2e2e2e;
+    color: #f0f0f0;
+}
+
+QPushButton {
+    background-color: #555555;
+    border: 1px solid #666666;
+	border-radius: 2;
+    color: #f0f0f0;
+	font-size: 14px;
+}
+
+QPushButton:hover {
+    background-color: #777777;
+}
+
+QLineEdit {
+    background-color: #3d3d3d;
+    color: #f0f0f0;
+    border: 1px solid #555555;
+}
+
+QComboBox {
+    background-color: #3d3d3d;
+    color: #f0f0f0;
+    border: 1px solid #555555;
+}
+
+QScrollBar:vertical {
+    background-color: #333333;
+    width: 8px;
+}
+
+QScrollBar::handle:vertical {
+    background-color: #777777;
+}
+
+/* Add more widget-specific styling as needed */
+</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <property name="enabled">
     <bool>true</bool>
@@ -26,16 +69,28 @@
         <pointsize>15</pointsize>
        </font>
       </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="locale">
+       <locale language="Russian" country="Russia"/>
+      </property>
       <property name="placeholderText">
        <string>Type your text here...</string>
       </property>
      </widget>
     </item>
     <item>
+     <widget class="QOpenGLWidget" name="openGLWidget"/>
+    </item>
+    <item>
      <widget class="QWidget" name="searchReplaceWidget" native="true">
       <layout class="QHBoxLayout" name="searchReplaceLayout">
        <item>
         <widget class="QLineEdit" name="searchInput">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
          <property name="placeholderText">
           <string>Search...</string>
          </property>
@@ -86,8 +141,6 @@
     <addaction name="actionExit"/>
     <addaction name="separator"/>
     <addaction name="separator"/>
-    <addaction name="actionEncrypt"/>
-    <addaction name="actionDecrypt"/>
    </widget>
    <widget class="QMenu" name="menuEdit">
     <property name="title">
@@ -140,16 +193,6 @@
   <action name="actionReplace">
    <property name="text">
     <string>Replace</string>
-   </property>
-  </action>
-  <action name="actionEncrypt">
-   <property name="text">
-    <string>Encrypt</string>
-   </property>
-  </action>
-  <action name="actionDecrypt">
-   <property name="text">
-    <string>Decrypt</string>
    </property>
   </action>
  </widget>
