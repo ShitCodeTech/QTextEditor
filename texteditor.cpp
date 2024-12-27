@@ -83,8 +83,8 @@ void TextEditor::search() {
         return;
     }
 
-    // Highlight all occurrences of the search term
-    highlightAllOccurrences(searchText);
+    // bug fixed)))
+    // highlightAllOccurrences(searchText);
 
     // Move to the first occurrence (optional)
     QTextCursor cursor = ui->textEdit->document()->find(searchText);
